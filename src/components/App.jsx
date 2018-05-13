@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addReminder , deleteReminder,clearReminders } from '../actions';
 import moment from 'moment';
-import AlertContainer from 'react-alert'
 
 class App extends Component{
 
@@ -95,7 +94,7 @@ class App extends Component{
               onChange= {event => this.setState({dueDate: event.target.value})}
             />
           </div>
-           <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
+          
           <button type="button"
               className="btn btn-success"
               onClick = {() => this.addReminder()}
