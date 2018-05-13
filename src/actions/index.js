@@ -1,27 +1,25 @@
-import { ADD_REMINDER , DELETE_REMINDER,CLEAR_REMINDERS } from '../constants';
+import { SIGNED_IN,SET_GOALS,SET_COMPLETED_GOALS } from '../constants';
 
-export const addReminder = (text,dueDate) => {
+export function logUser(email){
   const action = {
-    type: 'ADD_REMINDER',
-    text,
-    dueDate
+    type: SIGNED_IN,
+    email
   }
-  console.log("Action in Reminder ", action);
   return action;
 }
 
-export const deleteReminder = (id) => {
+export function setGoals(goals){
   const action = {
-    type: 'DELETE_REMINDER',
-    id
+    type: SET_GOALS,
+    goals
   }
-  console.log("Deleting Reminder ",action);
   return action;
 }
 
-export const clearReminders = () => {
-  const action ={
-    type: 'CLEAR_REMINDERS'
+export function setCompletedGoals(completedGoals){
+  const action = {
+    type: SET_COMPLETED_GOALS,
+    completedGoals
   }
   return action;
 }
