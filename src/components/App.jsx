@@ -13,13 +13,13 @@ class App extends Component{
   render(){
     return(
       <div style={{margin:"5px"}}>
-        <h3>Goal Coach</h3>
+        <h3>Task Manager</h3>
         <AddGoal />
         <hr />
-        <h4>Goals</h4>
+        <h4>Tasks</h4>
         <GoalList />
         <hr />
-        <h4>Completed Goals</h4>
+        <h4>Completed Tasks</h4>
         <CompletedGoalList />
         <hr />
         <button
