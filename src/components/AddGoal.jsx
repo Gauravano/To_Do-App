@@ -16,14 +16,14 @@ class AddGoal extends Component{
     const {title} = this.state;
     goalRef.push({email,title});
   }
-  
+
   render(){
     return(
       <div className="form-inline">
         <div className="form-group">
           <input
             type="text"
-            placeholder="Add  a goal"
+            placeholder="Add new task"
             className="form-control"
             style={{marginRight: "5px"}}
             onChange={event => this.setState({title: event.target.value})}
